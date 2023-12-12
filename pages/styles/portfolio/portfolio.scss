@@ -1,0 +1,12 @@
+//portfolio
+.page-title {
+    display: flex;
+    flex-direction: row;
+    font-size: $heading-l;
+    font-weight: bold;
+  }
+
+.card-project {
+    width: 40%;
+    height: auto;
+  }
