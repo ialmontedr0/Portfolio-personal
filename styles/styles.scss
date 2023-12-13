@@ -30,7 +30,28 @@ body {
   width: auto;
   position: relative;
   overflow: hidden;
-  border: 1px solid red;
+  border: 2px solid red;
+
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .hamburguesa-btn {
+    z-index: 1001;
+    padding: 2px;
+    margin: 4px;
+    border: none;
+    font-size: $body-m;
+    background-color: $color-light;
+    display: none;
+  }
 }
 
 .name-header {
@@ -38,15 +59,23 @@ body {
   text-align: left;
   flex: 1;
   padding-left: 15px;
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 .navbar-header {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid red;
+  transition: left 0.5s ease;
+  z-index: 1000;
+  border: 2px solid red;
   a {
     margin: 0 12px;
     font-size: $heading-m;
@@ -59,18 +88,18 @@ body {
 .main {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   flex: 1;
   padding: 10px;
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 .imagen {
-    max-width: 70%;
-    height: 80%;
-    border-radius: $borde-imagenes;
-    border: 1px solid red;
-    
-  }
+  max-width: 70%;
+  height: 80%;
+  border-radius: $borde-imagenes;
+  border: 2px solid red;
+}
 
 .contenido {
   display: flex;
@@ -80,32 +109,32 @@ body {
   height: 50%;
   padding: 10px;
   margin: 5px;
-  border: 1px solid red;
+  border: 2px solid red;
   margin-top: 70px;
   margin-left: 10px;
 
   h3 {
     font-size: $heading-m;
-    border: 1px solid red;
+    border: 2px solid red;
   }
 
   p {
     font-size: $body-sm;
     margin-bottom: 10px;
-    border: 1px solid red;
+    border: 2px solid red;
   }
 }
 
 .logos-habilidades {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
+  border: 2px solid red;
   svg {
     cursor: pointer;
     margin: 0 5px;
     width: 38px;
     height: 38px;
-    border: 1px solid red;
+    border: 2px solid red;
   }
 }
 
@@ -115,14 +144,13 @@ footer {
   flex-direction: row;
   padding-top: 10px;
   padding-bottom: 5px;
-  border: 1px solid red;
-  
+  border: 2px solid red;
+
   a {
     text-decoration: none;
   }
   svg {
     margin: 0 2px;
-    
   }
 }
 
@@ -140,60 +168,105 @@ footer {
     }
   }
 
-  .contenido {
-    
-    h3 {
-        font-size: $heading-sm;
+  .main {
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      width: 90%;
     }
 
-    .logos-habilidades {
+    .contenido {
+      width: 100%;
+      margin-top: 20px;
+
+      h3 {
+        font-size: $heading-sm;
+        text-align: center;
+      }
+
+      .logos-habilidades {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    .footer {
+      align-self: center;
     }
   }
 }
 
 // pantallas pequeñas (por ejemplo, móviles)
 @media (max-width: 431px) {
-  body {
-    padding: 6px;
+  .header {
+  .navbar-header.visible {
+    display: block;
+    left: 0;
   }
-
-  .contenido {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-
-    .imagen {
-        max-width: 80%;
-    }
-
-    h3 {
-        font-size: $heading-xsm;
-    }
-
-    .logos-habilidades {
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .menu-overlay.visible {
+    display: block;
+  }
+}
+  body {
+    padding: 0;
+    justify-content: space-between; // 
   }
 
   .header {
-    .name-header {
-      font-size: $heading-m;
-      text-align: center;
+    .hamburguesa-btn {
+      display: block; 
+      cursor: pointer;
     }
-    .navbar-header {
-      flex-direction: column;
-      a {
-        display: none;
-        font-size: $heading-xsm;
-      }
+    .name-header {
+      text-align: center;
+      font-size: $heading-l;
+      padding-left: 0;
+      cursor: pointer;
+    }
+    a {
+      display: block;
+      font-size: $heading-xsm;
     }
   }
 
+  .main {
+    flex-wrap: wrap;
+    justify-content: center;
 
-  .footer {
-    
+    .imagen {
+      max-width: 95%;
+      height: 80%;
+    }
+
+    .contenido {
+      width: 100%;
+      margin-top: 0;
+      padding-top: 0;
+
+      h3 {
+        font-size: $heading-sm;
+        text-align: center;
+      }
+
+      .logos-habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    justify-content: center;
+
+    .text-footer {
+      font-size: $body-xsm;
+    }
+
+    .footer-logos {
+    }
   }
 }
