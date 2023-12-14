@@ -1,0 +1,1 @@
+.main{width:100%}.cards{display:flex;flex-wrap:wrap}.cards .card{border:3px dashed red;width:auto;height:auto;margin:10px;padding:8px;border-radius:8px}.cards .card .contenido-card{border:2px solid red}

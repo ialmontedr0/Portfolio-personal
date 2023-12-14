@@ -28,6 +28,8 @@ body {
   flex-shrink: 0;
   width: auto;
   position: relative;
+  top: 0;
+  left: 0;
   overflow: hidden;
   border: 2px solid red;
 }
@@ -186,6 +188,11 @@ footer svg {
   .header .navbar-header.visible {
     display: block;
     left: 0;
+  }
+  .header .navbar-header.visible .navbar-content {
+    position: fixed;
+    top: 16px;
+    left: 30px;
   }
   .header .menu-overlay.visible {
     display: block;

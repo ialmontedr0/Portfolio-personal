@@ -1,13 +1,134 @@
+@import "../../../styles/variables";
 
-//portfolio
-.page-title {
-    display: flex;
-    flex-direction: row;
-    font-size: 24px;
-    font-weight: bold;
+.title-portfolio {
+  font-size: $heading-l;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  border: 3px dashed red;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  -webkit-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+
+  .imagen-card {
+    border: 2px solid red;
+    margin-right: 10px;
+    height: fit-content;
+    padding: 0;
+    border-radius: 8px;
+
+    img {
+      width: 35vw;
+      height: 30vh;
+    }
   }
 
-.card-project {
-    width: 40%;
-    height: auto;
+  .content-card {
+    border: 3px dashed red;
+    height: fit-content;
+    padding: 8px;
+
+    .text-card {
+      border: 2px solid red;
+      padding: 4px;
+      h2 {
+        border: 1px solid red;
+        padding: 4px;
+      }
+
+      p {
+        padding: 4px;
+        border: 1px solid red;
+      }
+    }
+
+    .logo-tools {
+      border: 2px solid red;
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      margin: 4px;
+
+      img {
+        cursor: pointer;
+        margin: 8px;
+        width: 48px;
+        height: 48px;
+        border: 1px solid red;
+      }
+    }
+
+    .buttons-card {
+      border: 3px dashed red;
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      padding: 4px;
+      margin: 4px;
+
+      button {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: $boton-text;
+        border: 2px solid red;
+        cursor: pointer;
+        margin-left: 4px;
+        margin-right: 4px;
+        border-radius: 8px;
+        border: none;
+        box-shadow: 0px 4px 1.5px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .link-button {
+        padding: 8px;
+        background: $azul-1;
+        color: $azul-3;
+
+        &:hover {
+          background-color: $azul-2;
+          color: #fff;
+          transition: 0.1s ease-in;
+        }
+        &:focus {
+          box-shadow: var(
+            --focussed-effect-box-shadow,
+            inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25)
+          );
+        }
+      }
+
+      .github-button {
+        padding: 8px;
+        background-color: $azul-2;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        &:hover {
+          background-color: $azul-1;
+          color: $gris-4;
+          transition: 0.1s ease-in-out;
+        }
+
+        &:focus {
+          box-shadow: var(
+            --focussed-effect-box-shadow,
+            inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25)
+          );
+        }
+      }
+    }
   }
+}

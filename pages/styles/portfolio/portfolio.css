@@ -1,11 +1,117 @@
-.page-title {
-  display: flex;
-  flex-direction: row;
-  font-size: 24px;
-  font-weight: bold;
+@import url("https://fonts.cdnfonts.com/css/poppins");
+.title-portfolio {
+  font-size: 36px;
 }
 
-.card-project {
-  width: 40%;
-  height: auto;
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  border: 3px dashed red;
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 8px;
+  box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+}
+.card .imagen-card {
+  border: 2px solid red;
+  margin-right: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  border-radius: 8px;
+}
+.card .imagen-card img {
+  width: 35vw;
+  height: 30vh;
+}
+.card .content-card {
+  border: 3px dashed red;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 8px;
+}
+.card .content-card .text-card {
+  border: 2px solid red;
+  padding: 4px;
+}
+.card .content-card .text-card h2 {
+  border: 1px solid red;
+  padding: 4px;
+}
+.card .content-card .text-card p {
+  padding: 4px;
+  border: 1px solid red;
+}
+.card .content-card .logo-tools {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 4px;
+}
+.card .content-card .logo-tools img {
+  cursor: pointer;
+  margin: 8px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid red;
+}
+.card .content-card .buttons-card {
+  border: 3px dashed red;
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px;
+  margin: 4px;
+}
+.card .content-card .buttons-card button {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  border: 2px solid red;
+  cursor: pointer;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 1.5px 0px rgba(0, 0, 0, 0.25);
+}
+.card .content-card .buttons-card .link-button {
+  padding: 8px;
+  background: #dbebfa;
+  color: #00334e;
+}
+.card .content-card .buttons-card .link-button:hover {
+  background-color: #007fbd;
+  color: #fff;
+  transition: 0.1s ease-in;
+}
+.card .content-card .buttons-card .link-button:focus {
+  box-shadow: var(--focussed-effect-box-shadow, inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.card .content-card .buttons-card .github-button {
+  padding: 8px;
+  background-color: #007fbd;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.card .content-card .buttons-card .github-button:hover {
+  background-color: #dbebfa;
+  color: #000000;
+  transition: 0.1s ease-in-out;
+}
+.card .content-card .buttons-card .github-button:focus {
+  box-shadow: var(--focussed-effect-box-shadow, inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25));
 }/*# sourceMappingURL=portfolio.css.map */
