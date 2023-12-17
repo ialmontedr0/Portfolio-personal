@@ -1,1 +1,135 @@
-/*# sourceMappingURL=testimonios.css.map */
+@import url("https://fonts.cdnfonts.com/css/poppins");
+.main {
+  padding: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.testimonio {
+  border: 3px dashed red;
+  width: 30vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+}
+.testimonio .imagen-testimonio {
+  border: 1px solid red;
+  margin: 2px;
+  margin-top: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+.testimonio .imagen-testimonio img {
+  max-width: 180px;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}
+.testimonio .content-testimonio {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 2px solid red;
+  margin: 4px;
+  margin-top: 16px;
+  padding: 2px;
+}
+.testimonio .content-testimonio .text-testimonio h2 {
+  border: 1px solid red;
+  padding: 4px;
+  font-size: 16px;
+}
+.testimonio .content-testimonio .text-testimonio p {
+  border: 1px solid red;
+  padding: 2px;
+  font-size: 12px;
+}
+.testimonio .content-testimonio .botones-testimonio {
+  border: 2px solid red;
+  padding: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.testimonio .content-testimonio .botones-testimonio button {
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 400;
+  padding: 4px 4px;
+  border: none;
+  border-radius: 6px;
+}
+.testimonio .content-testimonio .botones-testimonio .contacto-testimonio {
+  background: #dbebfa;
+}
+.testimonio .content-testimonio .botones-testimonio .repositorios-testimonio {
+  background: #00334e;
+  color: #fff;
+}
+@media (max-width: 431px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .testimonio .imagen-testimonio {
+    margin-top: 2px;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .testimonio .imagen-testimonio img {
+    max-width: 90%;
+    box-shadow: 9px 21px 42px -23px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 9px 21px 42px -23px rgba(0, 0, 0, 0.66);
+  }
+  .testimonio .content-testimonio {
+    margin-top: 8px;
+  }
+  .testimonio .content-testimonio .text-testimonio h2 {
+    text-align: center;
+  }
+  .testimonio .content-testimonio .botones-testimonio button {
+    cursor: pointer;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .testimonio .content-testimonio .botones-testimonio .contacto-testimonio:hover {
+    background: #00334e;
+    color: #fff;
+    transition: 0.1s ease-in-out;
+  }
+  .testimonio .content-testimonio .botones-testimonio .repositorios-testimonio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .testimonio .content-testimonio .botones-testimonio .repositorios-testimonio svg:hover {
+    fill: #000;
+  }
+  .testimonio .content-testimonio .botones-testimonio .repositorios-testimonio:hover {
+    background: #dbebfa;
+    color: #000;
+    transition: 0.1s ease-in-out;
+  }
+}/*# sourceMappingURL=testimonios.css.map */

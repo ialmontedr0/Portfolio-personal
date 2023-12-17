@@ -7,3 +7,7 @@ document.querySelector('.menu-overlay').addEventListener('click', function() {
     document.querySelector('.navbar-header').classList.remove('visible');
     document.querySelector('.menu-overlay').classList.remove('visible');
   });
+
+function mostrarMas() {
+    window.location.href = '/index.html';
+};

@@ -1,0 +1,206 @@
+@import "../../../styles/variables";
+
+.main {
+  padding: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.testimonio {
+  border: 3px dashed red;
+  width: 30vw;
+  height: fit-content;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+
+  .imagen-testimonio {
+    border: 1px solid red;
+    margin: 2px;
+    margin-top: 24px;
+    width: fit-content;
+    height: fit-content;
+
+    //contenido del contenedor incluida la imagen se ajustaran correctamente
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 180px;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .content-testimonio {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 2px solid red;
+    margin: 4px;
+    margin-top: 16px;
+    padding: 2px;
+    .text-testimonio {
+      h2 {
+        border: 1px solid red;
+        padding: 4px;
+        font-size: $heading-xsm;
+      }
+
+      p {
+        border: 1px solid red;
+        padding: 2px;
+        font-size: $body-xsm;
+      }
+    }
+    .botones-testimonio {
+      border: 2px solid red;
+      padding: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      justify-content: center;
+      align-items: center;
+
+      button {
+        font-size: $boton-text;
+        font-family: Poppins;
+        font-weight: 400;
+        padding: 4px 4px;
+        border: none;
+        border-radius: 6px;
+      }
+
+      .contacto-testimonio {
+        background: $azul-1;
+
+        &:hover {
+        }
+      }
+
+      .repositorios-testimonio {
+        background: $azul-3;
+        color: #fff;
+
+        &:hover {
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+//pantallas medianas
+@media (min-width: 431px) and (max-width: 1024px) {
+  .main {
+  }
+
+  .testimonio {
+    .imagen-testimonio {
+      img {
+      }
+    }
+
+    .content-testimonio {
+      .text-testimonio {
+        h2 {
+        }
+        p {
+        }
+      }
+      .botones-testimonio {
+        button {
+        }
+
+        .contacto-testimonio {
+        }
+
+        .repositorios-testimonio {
+        }
+      }
+    }
+  }
+}
+
+//pantallas pequeñas
+@media (max-width: 431px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    .imagen-testimonio {
+      margin-top: 2px;
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 90%;
+        box-shadow: 9px 21px 42px -23px rgba(0, 0, 0, 0.66);
+        -webkit-box-shadow: 9px 21px 42px -23px rgba(0, 0, 0, 0.66);
+      }
+    }
+
+    .content-testimonio {
+      margin-top: 8px;
+
+      .text-testimonio {
+        h2 {
+          text-align: center;
+        }
+        p {
+        }
+      }
+      .botones-testimonio {
+        button {
+            cursor: pointer;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .contacto-testimonio {
+
+            &:hover {
+                background: $azul-3;
+                color: #fff;
+                transition: 0.1s ease-in-out;
+            }
+        }
+
+        .repositorios-testimonio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+
+            svg {
+                
+                &:hover {
+                    fill: #000;
+                }
+            }
+
+            &:hover {
+                background: $azul-1;
+                color: #000;
+                transition: 0.1s ease-in-out;
+            }
+        }
+      }
+    }
+  }
+}

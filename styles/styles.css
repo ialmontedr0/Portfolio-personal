@@ -31,7 +31,6 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
-  border: 2px solid red;
 }
 .header .menu-overlay {
   display: none;
@@ -58,7 +57,6 @@ body {
   text-align: left;
   flex: 1;
   padding-left: 15px;
-  border: 2px solid red;
 }
 
 .navbar-header {
@@ -74,7 +72,6 @@ body {
   align-items: center;
   transition: left 0.5s ease;
   z-index: 1000;
-  border: 2px solid red;
 }
 .navbar-header a {
   margin: 0 12px;
@@ -90,14 +87,12 @@ body {
   flex-wrap: nowrap;
   flex: 1;
   padding: 10px;
-  border: 2px solid red;
 }
 
 .imagen {
   max-width: 70%;
   height: 80%;
   border-radius: 24px;
-  border: 2px solid red;
 }
 
 .contenido {
@@ -108,31 +103,26 @@ body {
   height: 50%;
   padding: 10px;
   margin: 5px;
-  border: 2px solid red;
   margin-top: 70px;
   margin-left: 10px;
 }
 .contenido h3 {
   font-size: 32px;
-  border: 2px solid red;
 }
 .contenido p {
   font-size: 16px;
   margin-bottom: 10px;
-  border: 2px solid red;
 }
 
 .logos-habilidades {
   display: flex;
   flex-direction: row;
-  border: 2px solid red;
 }
 .logos-habilidades svg {
   cursor: pointer;
   margin: 0 5px;
   width: 38px;
   height: 38px;
-  border: 2px solid red;
 }
 
 footer {
@@ -141,7 +131,6 @@ footer {
   flex-direction: row;
   padding-top: 10px;
   padding-bottom: 5px;
-  border: 2px solid red;
 }
 footer a {
   text-decoration: none;
@@ -220,6 +209,7 @@ footer svg {
     justify-content: center;
   }
   .main .imagen {
+    margin-bottom: 20px;
     max-width: 95%;
     height: 80%;
   }

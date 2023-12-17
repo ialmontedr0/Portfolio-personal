@@ -1,5 +1,8 @@
 @import "../../../styles/variables";
-
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
 .title-portfolio {
   font-size: $heading-l;
 }
@@ -128,6 +131,156 @@
             inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25)
           );
         }
+      }
+    }
+  }
+}
+
+.arrow {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+//pantallas medianas (por ejemplo, tablets)
+@media (min-width: 431px) and (max-width: 1024px) {
+  .title-portfolio {
+    font-size: $heading-sm;
+    padding: 4px;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+
+      .imagen-card {
+        margin: 0;
+        margin-bottom: 4px;
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+        }
+      }
+      .content-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .text-card {
+          text-align: center;
+
+          .title-project {
+            font-size: $heading-sm;
+          }
+
+          .description-projct {
+          }
+        }
+
+        .logo-tools {
+        }
+
+        .buttons-card {
+          display: inline-flex;
+          flex-wrap: wrap;
+          button {
+          }
+
+          .link-button {
+          }
+
+          .github-button {
+          }
+        }
+      }
+    }
+
+    .arrow {
+    }
+  }
+}
+
+//pantallas pequeñas
+@media (max-width: 431px) {
+  .title-portfolio {
+    font-size: $heading-sm;
+    padding: 4px;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+
+      .imagen-card {
+        margin: 0;
+        margin-bottom: 4px;
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+        }
+      }
+      .content-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .text-card {
+          text-align: center;
+
+          .title-project {
+            font-size: $heading-xsm;
+          }
+
+          .description-projct {
+          }
+        }
+
+        .logo-tools {
+        }
+
+        .buttons-card {
+          display: inline-flex;
+          flex-wrap: wrap;
+          button {
+          }
+
+          .link-button {
+          }
+
+          .github-button {
+          }
+        }
+      }
+    }
+
+    .arrow {
+      img {
+        width: 50px;
       }
     }
   }
