@@ -15,18 +15,18 @@ body {
 }
 
 .card {
-  border: 3px dashed red;
   display: flex;
   flex-direction: row;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 0.5px solid #c6c6c6;
   box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
 }
 .card .imagen-card {
-  border: 2px solid red;
   margin-right: 10px;
   height: -moz-fit-content;
   height: fit-content;
@@ -36,27 +36,25 @@ body {
 .card .imagen-card img {
   width: 35vw;
   height: 30vh;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
 }
 .card .content-card {
-  border: 3px dashed red;
   height: -moz-fit-content;
   height: fit-content;
   padding: 8px;
 }
 .card .content-card .text-card {
-  border: 2px solid red;
   padding: 4px;
 }
 .card .content-card .text-card h2 {
-  border: 1px solid red;
   padding: 4px;
 }
 .card .content-card .text-card p {
   padding: 4px;
-  border: 1px solid red;
 }
 .card .content-card .logo-tools {
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   width: -moz-fit-content;
@@ -68,10 +66,8 @@ body {
   margin: 8px;
   width: 48px;
   height: 48px;
-  border: 1px solid red;
 }
 .card .content-card .buttons-card {
-  border: 3px dashed red;
   display: flex;
   flex-direction: row;
   width: -moz-fit-content;
@@ -83,7 +79,6 @@ body {
   font-family: Poppins;
   font-weight: 600;
   font-size: 14px;
-  border: 2px solid red;
   cursor: pointer;
   margin-left: 4px;
   margin-right: 4px;
@@ -114,7 +109,7 @@ body {
 }
 .card .content-card .buttons-card .github-button:hover {
   background-color: #dbebfa;
-  color: #000000;
+  color: #00334e;
   transition: 0.1s ease-in-out;
 }
 .card .content-card .buttons-card .github-button:focus {

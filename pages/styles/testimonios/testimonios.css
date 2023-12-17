@@ -4,21 +4,25 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: flex-start;
 }
 
 .testimonio {
-  border: 3px dashed red;
-  width: 30vw;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  border: 0.5px solid rgb(176, 176, 176);
+  border-radius: 8px;
+  width: 48%;
   height: -moz-fit-content;
   height: fit-content;
   margin: 4px;
-  display: flex;
-  flex-direction: row;
+  padding: 8px;
+  box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
 }
 .testimonio .imagen-testimonio {
-  border: 1px solid red;
   margin: 2px;
+  margin-left: 8px;
+  margin-right: 4px;
   margin-top: 24px;
   width: -moz-fit-content;
   width: fit-content;
@@ -38,23 +42,20 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border: 2px solid red;
   margin: 4px;
   margin-top: 16px;
+  margin-right: 8px;
   padding: 2px;
 }
 .testimonio .content-testimonio .text-testimonio h2 {
-  border: 1px solid red;
   padding: 4px;
   font-size: 16px;
 }
 .testimonio .content-testimonio .text-testimonio p {
-  border: 1px solid red;
   padding: 2px;
   font-size: 12px;
 }
 .testimonio .content-testimonio .botones-testimonio {
-  border: 2px solid red;
   padding: 4px;
   display: flex;
   flex-wrap: wrap;
@@ -63,33 +64,79 @@
   align-items: center;
 }
 .testimonio .content-testimonio .botones-testimonio button {
-  font-size: 14px;
   font-family: Poppins;
-  font-weight: 400;
-  padding: 4px 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 8px;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
+  box-shadow: 0px 4px 1.5px 0px rgba(0, 0, 0, 0.25);
 }
 .testimonio .content-testimonio .botones-testimonio .contacto-testimonio {
   background: #dbebfa;
+  color: #00334e;
+}
+.testimonio .content-testimonio .botones-testimonio .contacto-testimonio:hover {
+  background-color: #007fbd;
+  color: #fff;
+  transition: 0.1s ease-in;
+}
+.testimonio .content-testimonio .botones-testimonio .contacto-testimonio:focus {
+  box-shadow: var(--focussed-effect-box-shadow, inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .testimonio .content-testimonio .botones-testimonio .repositorios-testimonio {
-  background: #00334e;
+  background-color: #007fbd;
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.testimonio .content-testimonio .botones-testimonio .repositorios-testimonio:hover {
+  background-color: #dbebfa;
+  color: #000000;
+  transition: 0.1s ease-in-out;
+}
+.testimonio .content-testimonio .botones-testimonio .repositorios-testimonio:focus {
+  box-shadow: var(--focussed-effect-box-shadow, inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media (min-width: 431px) and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .testimonio {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media (max-width: 431px) {
   .main {
     display: flex;
     flex-direction: column;
+    gap: 12px;
   }
   .testimonio {
     width: 100%;
+    margin: 0;
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 0px;
   }
   .testimonio .imagen-testimonio {
+    margin: 0;
     margin-top: 2px;
     width: 100%;
     height: -moz-fit-content;
@@ -110,9 +157,15 @@
     text-align: center;
   }
   .testimonio .content-testimonio .botones-testimonio button {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 14px;
     cursor: pointer;
-    padding-left: 12px;
-    padding-right: 12px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 4px 1.5px 0px rgba(0, 0, 0, 0.25);
   }
   .testimonio .content-testimonio .botones-testimonio .contacto-testimonio:hover {
     background: #00334e;

@@ -5,20 +5,26 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: flex-start;
 }
 
 .testimonio {
-  border: 3px dashed red;
-  width: 30vw;
-  height: fit-content;
-  margin: 4px;
+  background: #fff;
   display: flex;
   flex-direction: row;
+  border: 0.5px solid rgb(176, 176, 176);
+  border-radius: 8px;
+  width: 48%;
+  height: fit-content;
+  margin: 4px;
+  padding: 8px;
+  -webkit-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
 
   .imagen-testimonio {
-    border: 1px solid red;
     margin: 2px;
+    margin-left: 8px;
+    margin-right: 4px;
     margin-top: 24px;
     width: fit-content;
     height: fit-content;
@@ -40,25 +46,22 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border: 2px solid red;
     margin: 4px;
     margin-top: 16px;
+    margin-right: 8px;
     padding: 2px;
     .text-testimonio {
       h2 {
-        border: 1px solid red;
         padding: 4px;
         font-size: $heading-xsm;
       }
 
       p {
-        border: 1px solid red;
         padding: 2px;
         font-size: $body-xsm;
       }
     }
     .botones-testimonio {
-      border: 2px solid red;
       padding: 4px;
       display: flex;
       flex-wrap: wrap;
@@ -68,26 +71,53 @@
       align-items: center;
 
       button {
-        font-size: $boton-text;
         font-family: Poppins;
-        font-weight: 400;
-        padding: 4px 4px;
+        font-weight: 600;
+        font-size: $boton-text;
+        cursor: pointer;
+        margin-left: 4px;
+        margin-right: 4px;
+        padding: 8px;
+        border-radius: 8px;
         border: none;
-        border-radius: 6px;
+        box-shadow: 0px 4px 1.5px 0px rgba(0, 0, 0, 0.25);
       }
 
       .contacto-testimonio {
         background: $azul-1;
+        color: $azul-3;
 
         &:hover {
+          background-color: $azul-2;
+          color: #fff;
+          transition: 0.1s ease-in;
+        }
+        &:focus {
+          box-shadow: var(
+            --focussed-effect-box-shadow,
+            inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25)
+          );
         }
       }
 
       .repositorios-testimonio {
-        background: $azul-3;
+        background-color: $azul-2;
         color: #fff;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
 
         &:hover {
+          background-color: $azul-1;
+          color: $gris-4;
+          transition: 0.1s ease-in-out;
+        }
+
+        &:focus {
+          box-shadow: var(
+            --focussed-effect-box-shadow,
+            inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25)
+          );
         }
       }
     }
@@ -97,16 +127,33 @@
 //Media Queries
 //pantallas medianas
 @media (min-width: 431px) and (max-width: 1024px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .testimonio {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+
     .imagen-testimonio {
       img {
       }
     }
 
     .content-testimonio {
+
       .text-testimonio {
         h2 {
         }
@@ -132,16 +179,19 @@
   .main {
     display: flex;
     flex-direction: column;
+    gap: 12px;
   }
 
   .testimonio {
     width: 100%;
+    margin: 0;
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 0px;
 
     .imagen-testimonio {
+      margin: 0;
       margin-top: 2px;
       width: 100%;
       height: fit-content;
@@ -168,9 +218,15 @@
       }
       .botones-testimonio {
         button {
-            cursor: pointer;
-            padding-left: 12px;
-            padding-right: 12px;
+          font-family: Poppins;
+          font-weight: 600;
+          font-size: $boton-text;
+          cursor: pointer;
+          margin-left: 4px;
+          margin-right: 4px;
+          border-radius: 8px;
+          border: none;
+          box-shadow: 0px 4px 1.5px 0px rgba(0, 0, 0, 0.25);
         }
 
         .contacto-testimonio {

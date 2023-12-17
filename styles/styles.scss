@@ -60,27 +60,30 @@ body {
   text-align: left;
   flex: 1;
   padding-left: 15px;
+  color: $azul-3;
 }
 
 .navbar-header {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background-color: #fff;
-  display: flex;
+  position: relative;
+  left: auto;
+  width: auto;
+  height: auto;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-  transition: left 0.5s ease;
-  z-index: 1000;
-  a {
-    margin: 0 12px;
-    font-size: $heading-m;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
+  transition: none;
+
+  .navbar-content {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      margin: 0 12px;
+      font-size: $heading-sm;
+      font-weight: bold;
+      text-decoration: none;
+      color: $azul-3;
+    }
   }
 }
 
@@ -96,6 +99,9 @@ body {
   max-width: 70%;
   height: 80%;
   border-radius: $borde-imagenes;
+  -webkit-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
 }
 
 .contenido {
@@ -111,6 +117,7 @@ body {
 
   h3 {
     font-size: $heading-m;
+    color: $azul-3;
   }
 
   p {
@@ -152,7 +159,17 @@ footer {
       font-size: $heading-l;
     }
     .navbar-header {
-      flex-direction: row;
+      display: flex;
+      position: relative;
+      left: auto;
+      width: auto;
+      height: auto;
+
+      .navbar-content {
+        display: flex;
+        flex-direction: row;
+      }
+
       a {
         font-size: $heading-sm;
       }
@@ -191,40 +208,57 @@ footer {
 // pantallas pequeñas (por ejemplo, móviles)
 @media (max-width: 431px) {
   .header {
-  .navbar-header.visible {
-    display: block;
-    left: 0;
-
-    .navbar-content {
-      position: fixed;
-      top: 16px;
-      left: 30px;
-    }
-  }
-  .menu-overlay.visible {
-    display: block;
-  }
-}
-  body {
-    padding: 0;
-    justify-content: space-between; // 
-  }
-
-  .header {
-    .hamburguesa-btn {
-      display: block; 
-      cursor: pointer;
-    }
     .name-header {
       text-align: center;
       font-size: $heading-l;
       padding-left: 0;
       cursor: pointer;
     }
-    a {
-      display: block;
-      font-size: $heading-xsm;
+
+    .navbar-header {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background-color: $color-light;
+      z-index: 1000;
+      transition: left 0.3s ease;
     }
+
+    .navbar-header.visible {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      background-color: #fff;
+    }
+
+    .menu-overlay.visible {
+      display: block;
+    }
+
+    .hamburguesa-btn {
+      display: block;
+      cursor: pointer;
+    }
+
+    .navbar-content {
+      flex-direction: column;
+      position: inherit;
+      top: 10px;
+
+      a {
+        font-size: $heading-sm;
+      }
+    }
+  }
+
+  body {
+    padding: 0;
+    justify-content: space-between; //
   }
 
   .main {
@@ -264,7 +298,7 @@ footer {
       font-size: $body-xsm;
     }
 
-    .footer-logos {
-    }
+    /*.footer-logos {
+    }*/
   }
 }

@@ -14,18 +14,18 @@ body {
 }
 
 .card {
-  border: 3px dashed red;
   display: flex;
   flex-direction: row;
   width: fit-content;
   height: fit-content;
-  padding: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 0.5px solid #c6c6c6;
   -webkit-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
   -moz-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
   box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
 
   .imagen-card {
-    border: 2px solid red;
     margin-right: 10px;
     height: fit-content;
     padding: 0;
@@ -34,30 +34,30 @@ body {
     img {
       width: 35vw;
       height: 30vh;
+      border-radius: 8px;
+      margin-top: 8px;
+      -webkit-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+      -moz-box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
+      box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
     }
   }
 
   .content-card {
-    border: 3px dashed red;
     height: fit-content;
     padding: 8px;
 
     .text-card {
-      border: 2px solid red;
       padding: 4px;
       h2 {
-        border: 1px solid red;
         padding: 4px;
       }
 
       p {
         padding: 4px;
-        border: 1px solid red;
       }
     }
 
     .logo-tools {
-      border: 2px solid red;
       display: flex;
       flex-direction: row;
       width: fit-content;
@@ -68,12 +68,10 @@ body {
         margin: 8px;
         width: 48px;
         height: 48px;
-        border: 1px solid red;
       }
     }
 
     .buttons-card {
-      border: 3px dashed red;
       display: flex;
       flex-direction: row;
       width: fit-content;
@@ -84,7 +82,6 @@ body {
         font-family: Poppins;
         font-weight: 600;
         font-size: $boton-text;
-        border: 2px solid red;
         cursor: pointer;
         margin-left: 4px;
         margin-right: 4px;
@@ -121,7 +118,7 @@ body {
 
         &:hover {
           background-color: $azul-1;
-          color: $gris-4;
+          color: $azul-3;
           transition: 0.1s ease-in-out;
         }
 
@@ -144,7 +141,6 @@ body {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  
 }
 
 //pantallas medianas (por ejemplo, tablets)

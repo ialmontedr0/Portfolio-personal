@@ -57,28 +57,29 @@ body {
   text-align: left;
   flex: 1;
   padding-left: 15px;
+  color: #00334e;
 }
 
 .navbar-header {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background-color: #fff;
+  position: relative;
+  left: auto;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  transition: none;
+}
+.navbar-header .navbar-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  transition: left 0.5s ease;
-  z-index: 1000;
 }
-.navbar-header a {
+.navbar-header .navbar-content a {
   margin: 0 12px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   text-decoration: none;
-  color: black;
+  color: #00334e;
 }
 
 .main {
@@ -93,6 +94,7 @@ body {
   max-width: 70%;
   height: 80%;
   border-radius: 24px;
+  box-shadow: 0px 15px 58px -16px rgba(0, 0, 0, 0.43);
 }
 
 .contenido {
@@ -108,6 +110,7 @@ body {
 }
 .contenido h3 {
   font-size: 32px;
+  color: #00334e;
 }
 .contenido p {
   font-size: 16px;
@@ -144,6 +147,14 @@ footer svg {
     font-size: 36px;
   }
   .header .navbar-header {
+    display: flex;
+    position: relative;
+    left: auto;
+    width: auto;
+    height: auto;
+  }
+  .header .navbar-header .navbar-content {
+    display: flex;
     flex-direction: row;
   }
   .header .navbar-header a {
@@ -174,35 +185,49 @@ footer svg {
   }
 }
 @media (max-width: 431px) {
-  .header .navbar-header.visible {
-    display: block;
-    left: 0;
-  }
-  .header .navbar-header.visible .navbar-content {
-    position: fixed;
-    top: 16px;
-    left: 30px;
-  }
-  .header .menu-overlay.visible {
-    display: block;
-  }
-  body {
-    padding: 0;
-    justify-content: space-between;
-  }
-  .header .hamburguesa-btn {
-    display: block;
-    cursor: pointer;
-  }
   .header .name-header {
     text-align: center;
     font-size: 36px;
     padding-left: 0;
     cursor: pointer;
   }
-  .header a {
+  .header .navbar-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  .header .navbar-header.visible {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    background-color: #fff;
+  }
+  .header .menu-overlay.visible {
     display: block;
-    font-size: 16px;
+  }
+  .header .hamburguesa-btn {
+    display: block;
+    cursor: pointer;
+  }
+  .header .navbar-content {
+    flex-direction: column;
+    position: inherit;
+    top: 10px;
+  }
+  .header .navbar-content a {
+    font-size: 24px;
+  }
+  body {
+    padding: 0;
+    justify-content: space-between;
   }
   .main {
     flex-wrap: wrap;
@@ -232,6 +257,8 @@ footer svg {
     flex-wrap: wrap;
     padding: 2px;
     justify-content: center;
+    /*.footer-logos {
+    }*/
   }
   footer .text-footer {
     font-size: 12px;
