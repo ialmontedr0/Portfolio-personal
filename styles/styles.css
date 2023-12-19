@@ -7,6 +7,7 @@
 
 body {
   background-color: #ffffff;
+  color: #000000;
   font-family: Poppins;
   padding: 20px;
   padding-bottom: 0px;
@@ -17,6 +18,31 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+}
+body.dark-mode {
+  background-color: #121212;
+}
+body.dark-mode .header .hamburguesa-btn {
+  color: #ffffff;
+}
+body.dark-mode .name-header {
+  color: #ffffff;
+}
+body.dark-mode .navbar-header .navbar-content a {
+  color: #ffffff;
+}
+body.dark-mode h3 {
+  color: #ffffff;
+}
+body.dark-mode p {
+  color: #ffffff;
+}
+body.dark-mode .footer .text-footer {
+  color: #ffffff;
+}
+body.dark-mode .footer .footer-logos a svg {
+  fill: #fff;
+  stroke: #fff;
 }
 
 .header {
@@ -48,7 +74,8 @@ body {
   margin: 4px;
   border: none;
   font-size: 28px;
-  background-color: #ffffff;
+  background: none;
+  color: #000000;
   display: none;
 }
 
@@ -80,6 +107,15 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: #00334e;
+}
+.navbar-header .navbar-content button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.navbar-header .navbar-content button .svg-color-mode {
+  fill: #ffffff;
+  stroke: #ffffff;
 }
 
 .main {
@@ -185,6 +221,18 @@ footer svg {
   }
 }
 @media (max-width: 431px) {
+  body.dark-mode .header .navbar-header.visible {
+    background-color: rgba(231, 231, 231, 0.3607843137);
+  }
+  body.dark-mode .header .navbar-header.visible .navbar-content div,
+  body.dark-mode .header .navbar-header.visible .navbar-content button {
+    position: relative;
+    left: 0;
+  }
+  body.dark-mode .header .navbar-header.visible .navbar-content div a,
+  body.dark-mode .header .navbar-header.visible .navbar-content button a {
+    color: #ffffff;
+  }
   .header .name-header {
     text-align: center;
     font-size: 36px;
@@ -209,6 +257,11 @@ footer svg {
     left: 0;
     width: 50%;
     background-color: #fff;
+  }
+  .header .navbar-header.visible .navbar-content div a {
+    color: #00334e;
+    font-size: 16px;
+    left: 20px;
   }
   .header .menu-overlay.visible {
     display: block;

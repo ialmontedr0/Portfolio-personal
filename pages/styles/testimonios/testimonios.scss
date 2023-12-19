@@ -1,5 +1,34 @@
 @import "../../../styles/variables";
 
+body {
+  color: $azul-3;
+
+  &.dark-mode {
+    .title-testimonios {
+      color: #fff;
+    }
+    .main {
+      .testimonio {
+        background-color: rgba(133, 133, 133, 0.569);
+        -webkit-box-shadow: 0px 15px 58px -16px rgba(218, 215, 215, 0.43);
+        -moz-box-shadow: 0px 15px 58px -16px rgba(255, 253, 253, 0.43);
+        box-shadow: 0px 15px 58px -16px rgba(255, 244, 244, 0.43);
+
+        .content-testimonio {
+          .text-testimonio {
+            h2 {
+              color: $color-text-dark;
+            }
+            p {
+              color: $color-text-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .main {
   padding: 4px;
   display: flex;
@@ -59,6 +88,7 @@
       p {
         padding: 2px;
         font-size: $body-xsm;
+        color: $color-text-light;
       }
     }
     .botones-testimonio {
@@ -127,7 +157,6 @@
 //Media Queries
 //pantallas medianas
 @media (min-width: 431px) and (max-width: 1024px) {
-
   * {
     margin: 0;
     padding: 0;
@@ -145,7 +174,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 
     .imagen-testimonio {
       img {
@@ -153,7 +181,6 @@
     }
 
     .content-testimonio {
-
       .text-testimonio {
         h2 {
         }
@@ -179,16 +206,19 @@
   .main {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
   }
 
   .testimonio {
-    width: 100%;
+    width: 95%;
     margin: 0;
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    
+    gap: 0;
 
     .imagen-testimonio {
       margin: 0;
@@ -230,31 +260,29 @@
         }
 
         .contacto-testimonio {
-
-            &:hover {
-                background: $azul-3;
-                color: #fff;
-                transition: 0.1s ease-in-out;
-            }
+          &:hover {
+            background: $azul-3;
+            color: #fff;
+            transition: 0.1s ease-in-out;
+          }
         }
 
         .repositorios-testimonio {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
 
-            svg {
-                
-                &:hover {
-                    fill: #000;
-                }
-            }
-
+          svg {
             &:hover {
-                background: $azul-1;
-                color: #000;
-                transition: 0.1s ease-in-out;
+              fill: #000;
             }
+          }
+
+          &:hover {
+            background: $azul-1;
+            color: #000;
+            transition: 0.1s ease-in-out;
+          }
         }
       }
     }

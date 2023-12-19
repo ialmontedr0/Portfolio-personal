@@ -1,21 +1,32 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
+//modo claro
+$color-background-light: #ffffff;
+$color-text-light: #000000;
+
+//modo obscuro
+$color-background-dark: #121212;
+$color-text-dark: #ffffff;
 
 //colores
 $color-light: #ffffff;
 $color-dark: #000000;
 
 //paleta de colores
+
+//grises
 $gris-1: #c7c8ca;
 $gris-2: #939598;
 $gris-3: #636466;
 $gris-4: #000000;
 
+//azules
 $azul-1: #dbebfa;
 $azul-2: #007fbd;
 $azul-3: #00334e;
 $azul-4: #004d73;
 
+//verdes
 $verde-1: #b9dca4;
 $verde-2: #c0de9e;
 $verde-3: #85c446;
@@ -50,5 +61,4 @@ $boton-text: 14px;
 //Bordes
 $borde-imagenes: 24px;
 $borde-modales: 20px;
-
-$border-decimals: 0.5;
+$border-decimals: 0.5px;

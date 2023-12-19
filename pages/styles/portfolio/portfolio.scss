@@ -1,10 +1,38 @@
 @import "../../../styles/variables";
+
 body {
   display: flex;
   flex-wrap: wrap;
+  color: $azul-3;
+
+  &.dark-mode {
+    .title-portfolio {
+      color: $color-text-dark;
+    }
+    .main {
+      .card {
+        background-color: rgba(133, 133, 133, 0.569);
+        -webkit-box-shadow: 0px 15px 58px -16px rgba(218, 215, 215, 0.43);
+        -moz-box-shadow: 0px 15px 58px -16px rgba(255, 253, 253, 0.43);
+        box-shadow: 0px 15px 58px -16px rgba(255, 244, 244, 0.43);
+        .content-card {
+          .text-card {
+            .title-project {
+              color: $color-text-dark;
+            }
+            .description-projct {
+              color: $color-text-dark;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 .title-portfolio {
   font-size: $heading-l;
+  text-align: center;
 }
 
 .main {
@@ -54,6 +82,7 @@ body {
 
       p {
         padding: 4px;
+        color: #000000;
       }
     }
 
@@ -133,7 +162,7 @@ body {
   }
 }
 
-.arrow {
+.mi-flecha {
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
@@ -141,6 +170,14 @@ body {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#seccionDos {
+  display: none;
 }
 
 //pantallas medianas (por ejemplo, tablets)
@@ -214,11 +251,14 @@ body {
 //pantallas pequeñas
 @media (max-width: 431px) {
   .title-portfolio {
+    color: $azul-3;
     font-size: $heading-sm;
     padding: 4px;
+    text-align: center;
   }
 
   .main {
+    padding-top: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

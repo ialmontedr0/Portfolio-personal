@@ -2,10 +2,25 @@
 body {
   display: flex;
   flex-wrap: wrap;
+  color: #00334e;
+}
+body.dark-mode .title-portfolio {
+  color: #ffffff;
+}
+body.dark-mode .main .card {
+  background-color: rgba(133, 133, 133, 0.569);
+  box-shadow: 0px 15px 58px -16px rgba(255, 244, 244, 0.43);
+}
+body.dark-mode .main .card .content-card .text-card .title-project {
+  color: #ffffff;
+}
+body.dark-mode .main .card .content-card .text-card .description-projct {
+  color: #ffffff;
 }
 
 .title-portfolio {
   font-size: 36px;
+  text-align: center;
 }
 
 .main {
@@ -53,6 +68,7 @@ body {
 }
 .card .content-card .text-card p {
   padding: 4px;
+  color: #000000;
 }
 .card .content-card .logo-tools {
   display: flex;
@@ -116,7 +132,7 @@ body {
   box-shadow: var(--focussed-effect-box-shadow, inset 0px 0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.arrow {
+.mi-flecha {
   display: flex;
   flex-wrap: wrap;
   width: -moz-fit-content;
@@ -126,6 +142,14 @@ body {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#seccionDos {
+  display: none;
 }
 
 @media (min-width: 431px) and (max-width: 1024px) {
@@ -172,10 +196,13 @@ body {
 }
 @media (max-width: 431px) {
   .title-portfolio {
+    color: #00334e;
     font-size: 24px;
     padding: 4px;
+    text-align: center;
   }
   .main {
+    padding-top: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
